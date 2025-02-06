@@ -5,6 +5,15 @@ using registration.Entities;
 using registration.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // مدت زمان انقضای سشن
+    options.Cookie.HttpOnly = true; // امنیت بیشتر برای کوکی
+    options.Cookie.IsEssential = true; // برای جلوگیری از حذف شدن توسط GDPR
+});
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
@@ -15,6 +24,7 @@ builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
 builder.Services.AddScoped<IUserPasswordService, UserPasswordService>(); // ثبت UserPasswordService
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 builder.Services.AddScoped<UserLoginService>();
+builder.Services.AddScoped<IComfirmPasswordService, ForgetPasswordService>();
 // افزودن خدمات به کانتینر.
 builder.Services.AddControllersWithViews();
 
@@ -32,6 +42,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

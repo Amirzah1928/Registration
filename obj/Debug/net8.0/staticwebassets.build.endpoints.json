@@ -3,6 +3,88 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "css/ComfirmPasswordCss.css",
+      "AssetFile": "css/ComfirmPasswordCss.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs="
+        }
+      ]
+    },
+    {
+      "Route": "css/ComfirmPasswordCss.sy60e7mbcs.css",
+      "AssetFile": "css/ComfirmPasswordCss.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sy60e7mbcs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs="
+        },
+        {
+          "Name": "label",
+          "Value": "css/ComfirmPasswordCss.css"
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
@@ -163,6 +245,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "js/ComfirmPasswordJs.hxceac8xtp.js",
+      "AssetFile": "js/ComfirmPasswordJs.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1034"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hxceac8xtp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs="
+        },
+        {
+          "Name": "label",
+          "Value": "js/ComfirmPasswordJs.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/ComfirmPasswordJs.js",
+      "AssetFile": "js/ComfirmPasswordJs.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1034"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs="
         }
       ]
     },

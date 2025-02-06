@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gLrJAGQjm8vphw4d+QV/muAkaXJzbecH0sIsLptfImg=",
+  "Hash": "xoMUX6dNRPDhgJNJ6Xv6KiWrCd9DbjpY74eL1DvIiv4=",
   "Source": "registration",
   "BasePath": "_content/registration",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "G:\\Programing\\C#\\Projects\\registration\\registration\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\registration.bundle.scp.css"
     },
     {
+      "Identity": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\ComfirmPasswordCss.css",
+      "SourceId": "registration",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\",
+      "BasePath": "_content/registration",
+      "RelativePath": "css/ComfirmPasswordCss#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sy60e7mbcs",
+      "Integrity": "vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ComfirmPasswordCss.css"
+    },
+    {
       "Identity": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\site.css",
       "SourceId": "registration",
       "SourceType": "Discovered",
@@ -99,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\js\\ComfirmPasswordJs.js",
+      "SourceId": "registration",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\",
+      "BasePath": "_content/registration",
+      "RelativePath": "js/ComfirmPasswordJs#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hxceac8xtp",
+      "Integrity": "Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ComfirmPasswordJs.js"
     },
     {
       "Identity": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\js\\site.js",
@@ -1321,6 +1363,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/ComfirmPasswordCss.css",
+      "AssetFile": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\ComfirmPasswordCss.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs="
+        }
+      ]
+    },
+    {
+      "Route": "css/ComfirmPasswordCss.sy60e7mbcs.css",
+      "AssetFile": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\ComfirmPasswordCss.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sy60e7mbcs"
+        },
+        {
+          "Name": "label",
+          "Value": "css/ComfirmPasswordCss.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHLq7X4W+rmrTJRPe24kEF/jxuRvZaHVXFOofEI/ZGs="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1481,6 +1605,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "js/ComfirmPasswordJs.hxceac8xtp.js",
+      "AssetFile": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\js\\ComfirmPasswordJs.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1034"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hxceac8xtp"
+        },
+        {
+          "Name": "label",
+          "Value": "js/ComfirmPasswordJs.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs="
+        }
+      ]
+    },
+    {
+      "Route": "js/ComfirmPasswordJs.js",
+      "AssetFile": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\js\\ComfirmPasswordJs.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1034"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Cw2GpkmNERX7J6u9bE8w9EaC0H6SK/WyijUwitbpuWs="
         }
       ]
     },

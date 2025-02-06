@@ -154,7 +154,6 @@ G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\staticwebas
 G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.registration.props
 G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.registration.props
 G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\staticwebassets.pack.json
-G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\registra.A84A3CC8.Up2Date
 G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\registration.dll
 G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\refint\registration.dll
@@ -278,12 +277,11 @@ G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\ru\Microsof
 G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\System.Drawing.Common.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\System.Security.Permissions.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\System.Windows.Extensions.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
-G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\BCrypt.Net-Next.dll
+G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\registration.sourcelink.json
+G:\Programing\C#\Projects\registration\registration\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+G:\Programing\C#\Projects\registration\registration\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

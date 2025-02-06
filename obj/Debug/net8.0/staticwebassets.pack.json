@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\registration.fvjadxbswl.bundle.scp.css"
     },
     {
+      "Id": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\ComfirmPasswordCss.css",
+      "PackagePath": "staticwebassets\\css\\ComfirmPasswordCss.css"
+    },
+    {
       "Id": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\js\\ComfirmPasswordJs.js",
+      "PackagePath": "staticwebassets\\js\\ComfirmPasswordJs.js"
     },
     {
       "Id": "G:\\Programing\\C#\\Projects\\registration\\registration\\wwwroot\\js\\site.js",
