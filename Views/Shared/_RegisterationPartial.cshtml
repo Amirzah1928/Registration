@@ -1,21 +1,113 @@
-﻿@if(Context.User.Identity.Name != null)
-{
-    <form method="post" asp-controller="Registration" asp-action="Logout" id="logoutForm" class="navbar-right">
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                Hello @Context.User.Identity.Name
-            </li>
-            <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button>
-            </li>
-        </ul>
-    </form>
-}
-else
-{
-    <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link text-dark" asp-controller="Registration" asp-action="Register">Register</a></li>
-        <li><a class="nav-link text-dark" asp-controller="Registration" asp-action="Login">Login</a></li>
-    </ul>
-}
+﻿
+
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+
+        .dropdown-menu {
+            margin-top: 5px !important; /* فاصله منو از بالا */
+            margin-right: 0px !important; /* فاصله منو از راست */
+        }
+
+
+
+        /* اندازه و استایل آیکون پروفایل */
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        /* تنظیمات عمومی برای dropdown */
+        .profile-dropdown {
+            position: relative;
+        }
+
+            /* تنظیمات برای نمایش کشویی زیبا */
+            .profile-dropdown .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background: red;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                min-width: 150px;
+            }
+
+                /* وقتی dropdown فعال شد */
+                .profile-dropdown:hover .dropdown-menu,
+                .profile-dropdown .dropdown-menu.show {
+                    display: block;
+                }
+
+    </style>
+
+</head>
+<body>
+    <div class="container mt-2 d-flex justify-content-end">
+        @if (Context.User.Identity.IsAuthenticated)
+        {
+            <div class="dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="rounded-circle" width="40" height="40">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown" data-bs-popper="static">
+                    <li><span class="dropdown-item-text">Hello, @Context.User.Identity.Name</span></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <form method="post" asp-controller="Registration" asp-action="Logout">
+                            <button type="submit" class="dropdown-item">Log out</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        }
+        else
+        {
+            <div class="dropdown">
+                <a class="nav-link" href="#" role="button" id="guestDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Guest" class="rounded-circle" width="40" height="40">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="guestDropdown" data-bs-popper="static">
+                    <li><a class="dropdown-item" asp-controller="Registration" asp-action="Register">Register</a></li>
+                    <li><a class="dropdown-item" asp-controller="Registration" asp-action="Login">Login</a></li>
+                </ul>
+            </div>
+        }
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach(function (dropdown) {
+                let timeout; // متغیری برای مدیریت تأخیر بستن منو
+
+                dropdown.addEventListener("mouseenter", function () {
+                    clearTimeout(timeout); // اگر تایمری در حال اجرا باشد، آن را لغو کن
+                    let menu = this.querySelector(".dropdown-menu");
+                    menu.classList.add("show");
+                });
+
+                dropdown.addEventListener("mouseleave", function () {
+                    let menu = this.querySelector(".dropdown-menu");
+                    timeout = setTimeout(function () {
+                        menu.classList.remove("show");
+                    }, 100); // 1000 میلی‌ثانیه = 1 ثانیه
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
 
