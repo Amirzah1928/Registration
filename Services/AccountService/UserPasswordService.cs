@@ -2,7 +2,7 @@
 using Microsoft.CodeAnalysis.Scripting;
 using registration.Interfaces;
 
-namespace registration.AccountService
+namespace registration.Services.AccountService
 {
     public class UserPasswordService : IUserPasswordService
     {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using registration.Entities;
 using registration.Interfaces;
 
-namespace registration.AccountService
+namespace registration.Services.AccountService
 {
     public class ForgetPasswordService : IComfirmPasswordService
     {
@@ -48,7 +48,7 @@ namespace registration.AccountService
             return resetResult;
         }
 
-        private bool UpdateUser(User user)
+        public bool UpdateUser(User user)
         {
             try
             {

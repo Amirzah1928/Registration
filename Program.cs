@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using registration.AccountService;
 using registration.Entities;
 using registration.Interfaces;
+using registration.Services.AccountService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +25,8 @@ builder.Services.AddScoped<IUserPasswordService, UserPasswordService>(); // ثب
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 builder.Services.AddScoped<UserLoginService>();
 builder.Services.AddScoped<IComfirmPasswordService, ForgetPasswordService>();
+builder.Services.AddScoped<IPremiumActivationService, PremiumActivationService>();
+
 // افزودن خدمات به کانتینر.
 builder.Services.AddControllersWithViews();
 

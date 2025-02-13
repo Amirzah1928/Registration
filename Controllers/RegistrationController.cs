@@ -33,9 +33,12 @@ namespace registration.Controllers
 
 
 
-
+        
         public IActionResult Register()
         {
+            if(User.Identity.IsAuthenticated)
+                return RedirectToAction("Index");
+
             return View();
         }
 
@@ -66,9 +69,12 @@ namespace registration.Controllers
 
 
 
-
+        
         public IActionResult Login()
         {
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction("Index");
+
             return View();
         }
 
@@ -102,7 +108,7 @@ namespace registration.Controllers
 
         //ForgetPassword Service Actions
 
-
+        [Authorize]
         [HttpGet]
         public IActionResult ForgetPassword()
         {
@@ -139,10 +145,13 @@ namespace registration.Controllers
 
 
 
-
+        [Authorize]
         [HttpGet]
         public IActionResult ComfirmPassword()
         {
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction("Index");
+
             TempData["otpcode"] = HttpContext.Session.GetString("OtpCode");
             return View();
         }
@@ -166,7 +175,7 @@ namespace registration.Controllers
 
 
 
-
+        [Authorize]
         public IActionResult ResetPassword()
         {
             return View();
@@ -192,6 +201,11 @@ namespace registration.Controllers
 
 
 
+
+
+
+
+        [Authorize]
         public ActionResult Logout()
         {
             var taskresult = _userAuthenticationService.SignOutAsync();

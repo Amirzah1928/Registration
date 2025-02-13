@@ -4,30 +4,32 @@ using registration.Entities;
 using registration.Interfaces;
 using System.Security.Claims;
 
-namespace registration.AccountService
+namespace registration.Services.AccountService
 {
-    public class UserAuthenticationService : registration.Interfaces.IUserAuthenticationService
+    public class UserAuthenticationService : IUserAuthenticationService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly UserLoginService _userLoginService;
 
-        public UserAuthenticationService(IHttpContextAccessor httpContextAccessor,UserLoginService userLoginService)
+        public UserAuthenticationService(IHttpContextAccessor httpContextAccessor, UserLoginService userLoginService)
         {
             _httpContextAccessor = httpContextAccessor;
             _userLoginService = userLoginService;
         }
 
 
-        public async Task<bool> SignInAsync(string username,string password)
+        public async Task<bool> SignInAsync(string username, string password)
         {
             User user = _userLoginService.Validateuser(username, password);
+
             if (user == null)
-            return false;
+                return false;
 
             var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, username),
-            new Claim(ClaimTypes.Role, "User")
+            new Claim("IsPremium",user.IsPremium.ToString()),
+            new Claim("UserType",user.UserTypes.ToString())
         };
 
 
@@ -50,7 +52,7 @@ namespace registration.AccountService
             {
                 return false;
             }
-           
+
         }
     }
 }

@@ -1,6 +1,7 @@
-﻿
-
-
+﻿@{
+    var ispremiumclaim = User.FindFirst("IsPremium")?.Value;
+    var userType = User.FindFirst("UserType")?.Value;
+}
 
 <!DOCTYPE html>
 <html lang="fa">
@@ -60,8 +61,46 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="rounded-circle" width="40" height="40">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown" data-bs-popper="static">
-                    <li><span class="dropdown-item-text">Hello, @Context.User.Identity.Name</span></li>
+                    <li>
+                        <span class="dropdown-item-text" style="color:@(userType == "Gold" ? "gold" : userType == "Silver" ? "silver" : userType == "Bronze" ? "#CD7F32" : "Black")">
+                            Hello, @Context.User.Identity.Name
+                        </span>
+                    </li>
                     <li><hr class="dropdown-divider"></li>
+
+                    @if (userType == "Gold")
+                    {
+                        <li>
+                            <button type="submit" class="dropdown-item">Golden AI</button>
+                        </li>
+                    }
+
+                    @if (userType == "Silver" || userType == "Bronze")
+                    {
+                        <li>
+                            <button type="submit" class="dropdown-item">Premium AI</button>
+                        </li>
+                    }
+
+
+
+                    @if (Convert.ToBoolean(ispremiumclaim) == false)
+                    {
+                        <li>
+                            <form method="get" asp-controller="Premium" asp-action="Plans">
+                                <input class="form-control" value="@ispremiumclaim" hidden="hidden" />
+                                <button type="submit" class="dropdown-item">Buy Premium</button>
+                            </form>
+                        </li>
+                    }
+
+                    <li>
+                        <form method="get" asp-controller="Registration" asp-action="ForgetPassword">
+
+                            <button type="submit" class="dropdown-item">Change Password</button>
+                        </form>
+                    </li>
+
                     <li>
                         <form method="post" asp-controller="Registration" asp-action="Logout">
                             <button type="submit" class="dropdown-item">Log out</button>

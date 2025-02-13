@@ -1,0 +1,173 @@
+﻿<div class="plans-container">
+    <!-- پلن برنز -->
+    <div class="plan-card bronze">
+        <h3 class="plan-title">برنز</h3>
+        <p class="plan-price">۱۰۰,۰۰۰ تومان <span class="plan-duration">/ ماه</span></p>
+        <p class="plan-description">پلن پایه برای کاربران معمولی</p>
+        <ul class="plan-features">
+            <li>✅ دسترسی به تمام امکانات پایه</li>
+            <li>✅ پشتیبانی ۲۴ ساعته</li>
+            <li>✅ فضای ذخیره‌سازی ۵۰ گیگابایت</li>
+        </ul>
+        <a href="@Url.ActionLink("BronzePlan","Premium")"><button class="plan-button">انتخاب پلن</button></a>
+    </div>
+
+    <!-- پلن نقره -->
+    <div class="plan-card silver">
+        <h3 class="plan-title">نقره</h3>
+        <p class="plan-price">۲۰۰,۰۰۰ تومان <span class="plan-duration">/ ماه</span></p>
+        <p class="plan-description">پلن متوسط برای کاربران حرفه‌ای</p>
+        <ul class="plan-features">
+            <li>✅ دسترسی به تمام امکانات پایه</li>
+            <li>✅ پشتیبانی ۲۴ ساعته</li>
+            <li>✅ فضای ذخیره‌سازی ۱۰۰ گیگابایت</li>
+        </ul>
+        <a href="@Url.ActionLink("SilverPlan","Premium")"><button class="plan-button">انتخاب پلن</button></a>
+
+    </div>
+
+    <!-- پلن طلایی -->
+    <div class="plan-card gold">
+        <h3 class="plan-title">طلایی</h3>
+        <p class="plan-price">۳۰۰,۰۰۰ تومان <span class="plan-duration">/ ماه</span></p>
+        <p class="plan-description">پلن پیشرفته برای کاربران ویژه</p>
+        <ul class="plan-features">
+            <li>✅ دسترسی به تمام امکانات پایه</li>
+            <li>✅ پشتیبانی ۲۴ ساعته</li>
+            <li>✅ فضای ذخیره‌سازی نامحدود</li>
+            <li>✅ دسترسی به ویژگی‌های ویژه</li>
+        </ul>
+        <a href="@Url.ActionLink("GoldenPlan","Premium")"><button class="plan-button">انتخاب پلن</button></a>
+
+    </div>
+</div>
+
+<style>
+    /* استایل‌های کلی */
+    .plans-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        border-radius: 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .plan-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    .plan-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .plan-price {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .plan-duration {
+        font-size: 16px;
+        color: #777;
+    }
+
+    .plan-description {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .plan-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+        .plan-features li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+            .plan-features li::before {
+                content: "✔️";
+                position: absolute;
+                left: 0;
+                color: #28a745;
+            }
+
+    .plan-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+
+        .plan-button:hover {
+            background-color: #0056b3;
+        }
+
+    /* استایل‌های خاص برای هر پلن */
+    .bronze {
+        border-top: 5px solid #cd7f32;
+    }
+
+    .silver {
+        border-top: 5px solid #c0c0c0;
+    }
+
+    .gold {
+        border-top: 5px solid #ffd700;
+    }
+
+    /* افکت‌های رنگی */
+    .bronze .plan-button {
+        background-color: #cd7f32;
+    }
+
+        .bronze .plan-button:hover {
+            background-color: #b8732c;
+        }
+
+    .silver .plan-button {
+        background-color: #c0c0c0;
+    }
+
+        .silver .plan-button:hover {
+            background-color: #a8a8a8;
+        }
+
+    .gold .plan-button {
+        background-color: #ffd700;
+    }
+
+        .gold .plan-button:hover {
+            background-color: #e6c200;
+        }
+</style>

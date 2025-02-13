@@ -33,5 +33,11 @@ namespace registration.Entities
         [MaxLength(20,ErrorMessage = "Max 20 charecter  allowed")]
         public string UserName { get; set; }
 
+
+        public bool IsPremium { get; set; } = false;
+
+
+        public UserTypes UserTypes { get; set; } = UserTypes.None;
+
     }
 }

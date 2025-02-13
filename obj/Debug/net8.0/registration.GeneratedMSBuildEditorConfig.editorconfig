@@ -36,6 +36,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Programing/C\#/Projects/registration/registration/Views/Premium/BronzePlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbWl1bVxCcm9uemVQbGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Programing/C\#/Projects/registration/registration/Views/Premium/GoldenPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbWl1bVxHb2xkZW5QbGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Programing/C\#/Projects/registration/registration/Views/Premium/Plans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbWl1bVxQbGFucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Programing/C\#/Projects/registration/registration/Views/Premium/SilverPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbWl1bVxTaWx2ZXJQbGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/Programing/C\#/Projects/registration/registration/Views/Registration/ComfirmPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXENvbWZpcm1QYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

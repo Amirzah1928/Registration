@@ -3,7 +3,7 @@ using registration.Entities;
 using registration.Interfaces;
 using registration.Models;
 
-namespace registration.AccountService
+namespace registration.Services.AccountService
 {
     public class UserRegistrationService : IUserRegistrationService
     {
@@ -45,9 +45,9 @@ namespace registration.AccountService
                 return new Result { Success = true, Message = $"{model.FirstName} {model.LastName} was registered successfully" };
 
             }
-            catch (Exception ex)   
+            catch (Exception ex)
             {
-                return new Result { Success = false, Message= "An unexpected error occurred. Please try again." };
+                return new Result { Success = false, Message = "An unexpected error occurred. Please try again." };
             }
 
         }
