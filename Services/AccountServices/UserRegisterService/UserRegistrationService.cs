@@ -3,29 +3,28 @@ using registration.Entities;
 using registration.Interfaces;
 using registration.Models;
 
-namespace registration.Services.AccountService
+namespace registration.Services.AccountService.UserRegisterService
 {
     public class UserRegistrationService : IUserRegistrationService
     {
         private readonly ApplicationDbcontext _dbContext;
         private readonly IUserPasswordService _passwordService;
+        private readonly RegisterVlidation _registerVlidation;
 
-        public UserRegistrationService(ApplicationDbcontext dbcontext, IUserPasswordService passwordService)
+        public UserRegistrationService(ApplicationDbcontext dbcontext, IUserPasswordService passwordService, RegisterVlidation registerVlidation)
         {
             _dbContext = dbcontext;
             _passwordService = passwordService;
+            _registerVlidation = registerVlidation;
         }
 
         public Result RegisterUser(RegistrationViewModel model)
         {
-            if (model.Password == model.UserName)
-                return new Result { Success = false, Message = "Password cannot be the same as the username." };
 
-            if (_dbContext.Users.Any(u => u.UserName == model.UserName))
-                return new Result { Success = false, Message = "Username is already taken." };
+            Result validationResult = _registerVlidation.Validate(model.UserName, model.Password, model.Email);
+            if (validationResult.Success == false)
+                return validationResult;
 
-            if (_dbContext.Users.Any(u => u.Email == model.Email))
-                return new Result { Success = false, Message = "Email is already registered." };
 
 
             User user = new User()

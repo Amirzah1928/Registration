@@ -5,6 +5,6 @@ namespace registration.Interfaces
 {
     public interface IUserRegistrationService
     {
-        Result RegisterUser(RegistrationViewModel model);
+       public Result RegisterUser(RegistrationViewModel model);
     }
 }

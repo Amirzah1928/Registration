@@ -7,13 +7,12 @@ namespace registration.Services.AccountService
     {
         private readonly ApplicationDbcontext _dbcontext;
         private readonly IComfirmPasswordService _passwordService;
-        private readonly IUserPasswordService _userPasswordService;
+        
 
-        public PremiumActivationService(ApplicationDbcontext dbcontext, IComfirmPasswordService passwordService, IUserPasswordService userPasswordService)
+        public PremiumActivationService(ApplicationDbcontext dbcontext, IComfirmPasswordService passwordService)
         {
             _dbcontext = dbcontext;
             _passwordService = passwordService;
-            _userPasswordService = userPasswordService;
         }
 
         public bool Active(int Plan, string username)

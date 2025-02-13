@@ -4,17 +4,19 @@ using registration.Entities;
 using registration.Interfaces;
 using System.Security.Claims;
 
-namespace registration.Services.AccountService
+namespace registration.Services.AccountServices.UserLoginService
 {
     public class UserAuthenticationService : IUserAuthenticationService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly UserLoginService _userLoginService;
+        private readonly CookieCreator _cookiecreator;
+        private readonly LoginValidationService _userLoginService;
 
-        public UserAuthenticationService(IHttpContextAccessor httpContextAccessor, UserLoginService userLoginService)
+        public UserAuthenticationService(IHttpContextAccessor httpContextAccessor, LoginValidationService userLoginService, CookieCreator cookieCreator)
         {
             _httpContextAccessor = httpContextAccessor;
             _userLoginService = userLoginService;
+            _cookiecreator = cookieCreator;
         }
 
 
@@ -25,21 +27,19 @@ namespace registration.Services.AccountService
             if (user == null)
                 return false;
 
-            var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, username),
-            new Claim("IsPremium",user.IsPremium.ToString()),
-            new Claim("UserType",user.UserTypes.ToString())
-        };
-
-
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-            await _httpContextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
-            return true;
+           var creationResult = _cookiecreator.CreateCookie(user,username);
+           
+            return creationResult.Result;
 
         }
+
+
+
+
+
+
+
+
 
         public async Task<bool> SignOutAsync()
         {

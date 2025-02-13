@@ -2,7 +2,7 @@
 using Microsoft.CodeAnalysis.Scripting;
 using registration.Interfaces;
 
-namespace registration.Services.AccountService
+namespace registration.Services.AccountServices.PasswordHasherService
 {
     public class UserPasswordService : IUserPasswordService
     {

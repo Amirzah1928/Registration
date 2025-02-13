@@ -1,13 +1,13 @@
 ﻿using registration.Entities;
 using registration.Interfaces;
-namespace registration.Services.AccountService
+namespace registration.Services.AccountServices.UserLoginService
 {
-    public class UserLoginService
+    public class LoginValidationService
     {
         private readonly ApplicationDbcontext _dbcontext;
         private readonly IUserPasswordService _passwordService;
 
-        public UserLoginService(ApplicationDbcontext dbcontext, IUserPasswordService passwordService)
+        public LoginValidationService(ApplicationDbcontext dbcontext, IUserPasswordService passwordService)
         {
             _dbcontext = dbcontext;
             _passwordService = passwordService;

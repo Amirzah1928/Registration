@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using registration.Entities;
 using registration.Interfaces;
 using registration.Models;
+using registration.Services.AccountServices.PasswordRecoveryService;
 
 
 namespace registration.Controllers
@@ -14,13 +14,16 @@ namespace registration.Controllers
         private readonly IUserRegistrationService _userRegistrationService;
         private readonly IUserAuthenticationService _userAuthenticationService;
         private readonly IComfirmPasswordService _resetPasswordService;
+        private readonly CodeGenerator _codeGenerator;
+
         public RegistrationController(IComfirmPasswordService resetPasswordService, ApplicationDbcontext dbcontext, IUserRegistrationService userRegistrationService,
-            IUserPasswordService userPasswordService, IUserAuthenticationService userAuthenticationService)
+            IUserPasswordService userPasswordService, IUserAuthenticationService userAuthenticationService,CodeGenerator codeGenerator)
         {
             _userRegistrationService = userRegistrationService;
             _dbcontext = dbcontext;
             _userAuthenticationService = userAuthenticationService;
             _resetPasswordService = resetPasswordService;
+            _codeGenerator = codeGenerator;
         }
 
 
@@ -123,7 +126,7 @@ namespace registration.Controllers
                 return View(model);
 
 
-            var result = _resetPasswordService.FindUserbyEmail(model.Email);
+            var result = _dbcontext.Users.FirstOrDefault(x => x.Email == model.Email);
 
             if (result == null)
             {
@@ -132,8 +135,8 @@ namespace registration.Controllers
             }
 
             HttpContext.Session.SetString("Email",model.Email);
-            //HttpContext.Session.SetString("User", result.Password);
-            HttpContext.Session.SetString("OtpCode", _resetPasswordService.CodeGenrator());
+            
+            HttpContext.Session.SetString("OtpCode", _codeGenerator.CodeGenrator());
            
             return RedirectToAction("ComfirmPassword");
         }
